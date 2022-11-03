@@ -1,0 +1,121 @@
+body {
+  background-color: purple;
+}
+
+.container {
+  width: 500px;
+  background-color: aliceblue;
+}
+
+.title-main-container {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  border-bottom: 1px solid rgb(196, 194, 194);
+}
+
+.title-container {
+  width: 90%;
+}
+
+.today-text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 16px;
+}
+
+.refresh-icon-container {
+  width: 10%;
+  height: 55px;
+}
+
+.refresh-icon {
+  width: 100%;
+  height: 55px;
+  background-image: url(./images/loading.png);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.form {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  border-bottom: 1px solid rgb(196, 194, 194);
+}
+
+.input-container {
+  width: 90%;
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgb(196, 194, 194);
+}
+
+input[type='text'] {
+  width: 96%;
+  height: 55px;
+  outline: none;
+  border: none;
+  padding-left: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  background: none;
+}
+
+.enter-icon-container {
+  width: 10%;
+  height: 55px;
+}
+
+.enter-icon {
+  width: 100%;
+  height: 55px;
+  background-image: url(./images/enter-icon.png);
+  background-size: 10px 16px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.to-do-list-container {
+  width: 100%;
+}
+
+.to-do {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  border-bottom: 1px solid rgb(196, 194, 194);
+}
+
+input[type='checkbox'] {
+  width: 4%;
+  margin-left: 15px;
+}
+
+.my-text {
+  width: 82.5%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.dots-icon {
+  width: 10%;
+  height: 55px;
+  background-image: url(./images/dots-icon.png);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.clear-all-completed {
+  width: 100%;
+  height: 65px;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+}
