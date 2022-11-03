@@ -9,7 +9,7 @@ this repo created to contains to do list project files.
 Live Demo [Link](#)
 ## Getting Started
 Simply you can open index.html file with any browser and, you will see the home page.
-for opennig index.html go to awesome-books directory, find index.html, right click on it, click on open with and, click on any browser which is available on your pc/labtop. 
+for opennig index.html go to to-do-list directory, find index.html, right click on it, click on open with and, click on any browser which is available on your pc/labtop. 
 ### Prerequisites
 ### Browser
 ## Author
