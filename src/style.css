@@ -111,6 +111,13 @@ input[type='checkbox'] {
   background-position: 50% 50%;
 }
 
+.remove {
+  width: 10%;
+  height: 55px;
+  background-image: url(./images/remove.png);
+  background-repeat: no-repeat;
+}
+
 .clear-all-completed {
   width: 100%;
   height: 65px;
@@ -118,4 +125,12 @@ input[type='checkbox'] {
   font-weight: 600;
   outline: none;
   border: none;
+}
+
+.display-none {
+  display: none;
+}
+
+.color {
+  background-color: #f7c736;
 }
