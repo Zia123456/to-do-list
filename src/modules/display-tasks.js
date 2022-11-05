@@ -1,6 +1,7 @@
-import { listDiv } from './html-element';
+import { input, listDiv } from './html-element';
 import functionalty from './add-and-remove';
 import Task from './to-do';
+import updateStatus from './status';
 
 const displayList = function display() {
   listDiv.innerHTML = '';
@@ -10,18 +11,23 @@ const displayList = function display() {
   list.sort((a, b) => a.index - b.index);
 
   for (let i = 0; i < list.length; i += 1) {
+    const status = list[i].checked;
     const toDoDiv = document.createElement('div');
     toDoDiv.className = 'to-do';
 
     const input = document.createElement('input');
     input.className = 'check-box';
-    input.id = i;
     input.setAttribute('type', 'checkbox');
+    input.checked = status;
+    input.onclick = () => {
+      updateStatus(i);
+    };
+
     toDoDiv.appendChild(input);
 
     const textDiv = document.createElement('div');
     textDiv.className = 'my-text';
-    textDiv.innerHTML = `${list[i].description}`;
+    textDiv.innerHTML = list[i].description;
     toDoDiv.appendChild(textDiv);
 
     const removeIconDiv = document.createElement('div');
@@ -46,13 +52,13 @@ const displayList = function display() {
       editInput.classList = 'edit-input';
       toDoDiv.appendChild(editInput);
       textDiv.classList.add('display-none');
-      editInput.value = `${list[i].description}`;
+      editInput.value = list[i].description;
 
       editInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter' && editInput.value !== '') {
           event.preventDefault();
-          const editChecked = `${list[i].checked}`;
-          const editId = `${list[i].id}`;
+          const editChecked = list[i].checked;
+          const editId = list[i].id;
           functionalty.removeEditedTask(i);
           const editTask = new Task(editInput.value, editChecked, editId);
           const oldData = JSON.parse(localStorage.getItem('myTasks'));
@@ -69,3 +75,4 @@ const displayList = function display() {
 };
 
 export default displayList;
+export { input };
