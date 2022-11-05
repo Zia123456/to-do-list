@@ -5,5 +5,6 @@ const taskDiv = document.querySelector('.to-do');
 const dots = document.querySelector('dots-icon');
 const remove = document.querySelector('.remove');
 const enter = document.querySelector('.enter-icon');
+const deletecompletedTasks = document.querySelector('.clear-all-completed');
 
-export { input, listDiv, dots, taskDiv, remove, enter };
+export { input, listDiv, dots, taskDiv, remove, enter, deletecompletedTasks };
