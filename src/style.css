@@ -102,6 +102,14 @@ input[type='checkbox'] {
   padding-left: 10px;
 }
 
+.edit-input {
+  width: 82.5%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
 .dots-icon {
   width: 10%;
   height: 55px;
@@ -116,6 +124,7 @@ input[type='checkbox'] {
   height: 55px;
   background-image: url(./images/remove.png);
   background-repeat: no-repeat;
+  order: 2;
 }
 
 .clear-all-completed {

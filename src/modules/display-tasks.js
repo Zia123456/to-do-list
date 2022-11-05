@@ -1,18 +1,14 @@
-/* eslint-disable import/prefer-default-export */
 import { listDiv } from './html-element';
-import { functionalty } from './add-and-remove';
+import functionalty from './add-and-remove';
+import Task from './to-do';
 
-// function to display to do list
 const displayList = function display() {
   listDiv.innerHTML = '';
 
-  // receiving data from local storage
   const list = JSON.parse(localStorage.getItem('myTasks'));
 
-  // js to sort array of objects by index value
   list.sort((a, b) => a.index - b.index);
 
-  // js to iterate through array of object and display sorted array
   for (let i = 0; i < list.length; i += 1) {
     const toDoDiv = document.createElement('div');
     toDoDiv.className = 'to-do';
@@ -44,6 +40,27 @@ const displayList = function display() {
       removeIconDiv.classList.add('remove');
       imgDiv.classList.remove('dots-icon');
       toDoDiv.classList.add('color');
+
+      const editInput = document.createElement('input');
+      editInput.setAttribute('type', 'text');
+      editInput.classList = 'edit-input';
+      toDoDiv.appendChild(editInput);
+      textDiv.classList.add('display-none');
+      editInput.value = `${list[i].description}`;
+
+      editInput.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter' && editInput.value !== '') {
+          event.preventDefault();
+          const editChecked = `${list[i].checked}`;
+          const editId = `${list[i].id}`;
+          functionalty.removeEditedTask(i);
+          const editTask = new Task(editInput.value, editChecked, editId);
+          const oldData = JSON.parse(localStorage.getItem('myTasks'));
+          oldData.splice(i, 0, editTask);
+          localStorage.setItem('myTasks', JSON.stringify(oldData));
+          displayList();
+        }
+      });
     };
     toDoDiv.appendChild(imgDiv);
 
@@ -51,4 +68,4 @@ const displayList = function display() {
   }
 };
 
-export { displayList };
+export default displayList;

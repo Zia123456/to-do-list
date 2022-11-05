@@ -1,6 +1,4 @@
 /* eslint-disable object-curly-newline */
-/* eslint-disable import/prefer-default-export */
-// access html elements
 const listDiv = document.querySelector('.to-do-list-container');
 const input = document.querySelector('.input');
 const taskDiv = document.querySelector('.to-do');

@@ -1,6 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-// Task class
-
 class Task {
   constructor(todo, check, id) {
     this.description = todo;
@@ -9,4 +6,4 @@ class Task {
   }
 }
 
-export { Task };
+export default Task;
