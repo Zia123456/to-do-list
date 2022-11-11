@@ -1,5 +1,7 @@
 body {
-  background-color: purple;
+  background-color: rgb(122, 157, 158);
+  display: flex;
+  justify-content: center;
 }
 
 .container {
@@ -122,6 +124,7 @@ input[type='checkbox'] {
 .remove {
   width: 10%;
   height: 55px;
+  margin-right: 10px;
   background-image: url(./images/remove.png);
   background-repeat: no-repeat;
   order: 2;
